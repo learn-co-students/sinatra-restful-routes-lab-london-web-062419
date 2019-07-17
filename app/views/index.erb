@@ -1,0 +1,14 @@
+<h2>This is the "index" page</h2>
+
+<!-- iterate through all recipes and output names -->
+<!-- every name has a link to its' recipe -->
+
+<ul>
+<% @recipes.each do |recipe|%>
+  <li>
+    <a href="/recipes/<%= recipe.id %>">Name: <%= recipe.name %></a>
+    Ingredients: <%= recipe.ingredients %>
+    Cook time <%= recipe.cook_time %>
+  </li>
+<% end %>
+</ul>
