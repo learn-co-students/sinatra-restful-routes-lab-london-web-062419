@@ -1,0 +1,14 @@
+<h2>This is the "index" page</h2>
+<ul>
+
+<% @recipes.each do |recipe| %>
+<li>
+<a href= "/recipes/<%= recipe.id %>">
+<%= recipe.name %>
+</li>
+</a>
+<%end%>
+</ul>
+<a href="/recipes/new">Create New Recipe</a>
+
+
